@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { font-size: 42px; }
+</style>
+</head>
+<body>
+
+<h1>Opva AI</h1>
+
+<br/>
+
+<div id="display">
+  <p>Introduing Opva AI.</p>
+</div>
+
+<br/>
+<button id="phone">Click This</button>
+<br/>
+
+<p style="font-size:12px;">UPLOADED: default.shtml</p>
+
+<script>
+
+const button = document.getElementById('phone');
+
+const div = document.getElementById('display');
+
+
+function myFunction() {
+
+  var brain = [
+    'What?',
+    'When?',    
+    'Uh Huh.',
+    'So?',
+    'You tell me.',
+    'Tell me more.',
+    'Go on...',
+    'Interesting, go on.',
+    'Please continue.',
+    'And then what happened?',
+    'May I hear more?',
+    'I am listening',
+    'Keep on',
+    'Really?'
+  ];
+
+  var thought = Math.floor(Math.random()*brain.length);
+
+return brain[thought];
+
+}
+
+
+function respond() {
+ 
+    let result = myFunction();
+   
+    div.innerHTML = "<p>"+result+"</p>";
+  
+}
+
+
+// Event Listener
+  
+button.addEventListener('click', respond);
+
+</script>
+
+</body>
+
+</html>
